@@ -21,6 +21,10 @@ condor_submit condor_DarkHiggs_WW_Zp2000_s200_Chi100.submit
 ```
 This submits 50 jobs with 2000 events per job. The first argument `DarkHiggs_WW_Zp2000_s200_Chi100` refers to the gridpack file name. Jobs run based on the template file `Template_DarkHiggs-fragment.py` and not the actual fragment file. Take a look at `worker.sh` file for all the steps including gridpack location and output file transfer location.
 
+## Private sample generation with partTV2
+Copy the tar file from `/afs/cern.ch/work/v/vhegde/public/Physics/darkHiggsSampleGen/NanoTuples_Run2UL18_partTV2.tar` to working area.
+Use `submitJobs_parTV2.sh` for creating submission scripts. It uses `worker_parTV2NanoV9.sh` and `Summer20UL18_SampleMaker_parTV2NanoV9.sh` files along with all `step_*_cfg.py`.
+Addition on parTV2 to Nano is based on https://github.com/colizz/NanoTuples/tree/dev-part-UL.
 
 
 
